@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export const Cta = () => {
     return (
         <section className="py-20 bg-primary">
@@ -7,9 +9,9 @@ export const Cta = () => {
                     Start using our free YouTube thumbnail downloader now. No registration required, instant downloads, and
                     all resolutions available.
                 </p>
-                <button className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                <Link href={"/#home"} className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
                     Get Started Now
-                </button>
+                </Link>
             </div>
         </section>
     )

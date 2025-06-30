@@ -3,7 +3,7 @@ import { Globe, Shield, Zap } from "lucide-react"
 
 export const Home = () => {
     return (
-        <section className="rounded-xl mt-10 py-20 lg:py-32 bg-gradient-to-br from-primary/10 to-primary/15 container mx-auto px-4 text-center">
+        <section id="home" className="rounded-xl mt-10 py-20 lg:py-32 bg-gradient-to-br from-primary/10 to-primary/15 container mx-auto px-4 text-center">
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-wide text-gray-900 mb-6">
                 Download YouTube Thumbnails
                 <span className="text-primary block">In High Quality</span>

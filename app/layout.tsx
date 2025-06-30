@@ -64,9 +64,9 @@ export default function RootLayout({
                 <a href="#faq" className="text-gray-600 hover:text-primary transition-colors">
                   FAQ
                 </a>
-                <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-rose-700 transition-colors">
+                <Link href="/#home" className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-rose-700 transition-colors">
                   Get Started
-                </button>
+                </Link>
               </div>
             </div>
           </nav>
@@ -76,42 +76,23 @@ export default function RootLayout({
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8">
               <div>
-                <div className="flex items-center space-x-2 mb-6">
+                <Link href="/#" className="flex items-center space-x-2 mb-6">
                   <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                     <Download className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-xl font-bold">ThumbnailSaver</span>
-                </div>
+                </Link>
                 <p className="text-gray-400 mb-6">
                   The best free YouTube thumbnail downloader. Download high-quality thumbnails instantly.
                 </p>
-                <div className="flex space-x-4">
-                  <div className="w-8 h-8 bg-gray-800 rounded-full"></div>
-                  <div className="w-8 h-8 bg-gray-800 rounded-full"></div>
-                  <div className="w-8 h-8 bg-gray-800 rounded-full"></div>
-                </div>
+
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-6">Tools</h3>
                 <ul className="space-y-3 text-gray-400">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      YouTube Thumbnail Downloader
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Bulk Thumbnail Downloader
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Thumbnail Generator
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Video Thumbnail Extractor
+                    <a href="https://testthumbnail.me" target="_blank" className="hover:text-white transition-colors">
+                      YouTube Thumbnail Tester
                     </a>
                   </li>
                 </ul>
@@ -120,47 +101,34 @@ export default function RootLayout({
                 <h3 className="text-lg font-semibold mb-6">Resources</h3>
                 <ul className="space-y-3 text-gray-400">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <Link href="/#how-to" className="hover:text-white transition-colors">
                       How to Use
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <Link href="/#faq" className="hover:text-white transition-colors">
                       FAQ
-                    </a>
+                    </Link>
                   </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      API Documentation
-                    </a>
-                  </li>
+
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-6">Legal</h3>
                 <ul className="space-y-3 text-gray-400">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="/privacy-policy" className="hover:text-white transition-colors">
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="/terms" className="hover:text-white transition-colors">
                       Terms of Service
                     </a>
                   </li>
+
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Cookie Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="/contact" className="hover:text-white transition-colors">
                       Contact Us
                     </a>
                   </li>
@@ -176,6 +144,6 @@ export default function RootLayout({
           fontFamily: "var(--font-montserrat)",
         }} closeButton duration={1500} />
       </body>
-    </html>
+    </html >
   );
 }
