@@ -3,12 +3,12 @@ import { Globe, Shield, Zap } from "lucide-react"
 
 export const Home = () => {
     return (
-        <section className="rounded-xl mt-10 py-20 lg:py-32 bg-gradient-to-br from-primary/5 to-primary/10 container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-wide text-gray-900 mb-6">
+        <section className="rounded-xl mt-10 py-20 lg:py-32 bg-gradient-to-br from-primary/10 to-primary/15 container mx-auto px-4 text-center">
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-wide text-gray-900 mb-6">
                 Download YouTube Thumbnails
                 <span className="text-primary block">In High Quality</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
                 Extract and download YouTube video thumbnails in HD, Full HD, and 4K resolution. Free, fast, and works
                 with any YouTube video URL. No registration required.
             </p>

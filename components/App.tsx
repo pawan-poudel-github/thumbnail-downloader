@@ -17,26 +17,24 @@ export const App = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        const match = url.match(/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube(-nocookie)?\.com|youtu.be))(\/(?:[\w\-]+\?v=|shorts\/|embed\/|v\/)?)([\w\-]+)(\S+)?$/);
-        setId(match ? match[6] : null)
 
-        if (!id) {
+        const match = url.match(
+            /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube(-nocookie)?\.com|youtu.be))(\/(?:[\w\-]+\?v=|shorts\/|embed\/|v\/)?)([\w\-]+)(\S+)?$/
+        );
+
+        const extractedId = match ? match[6] : null;
+        if (!extractedId) {
             toast("Invalid url.", {
                 description: "Please enter a valid YouTube video URL.",
                 icon: "🚫",
             });
             return;
         }
-        if (url) {
-            setIsOpen(true);
 
-        } else {
-            toast("Invalid url.", {
-                description: "Please enter a valid YouTube video URL.",
-                icon: "🚫",
-            });
-        }
-    }
+        setId(extractedId);
+        setIsOpen(true);
+    };
+
     const downloadImage = async (imageSrc: string) => {
         const proxyURL = `https://proxy-youtube-webp.vercel.app/?url=${encodeURIComponent(imageSrc)}`;
         try {
@@ -88,65 +86,60 @@ export const App = () => {
 
                             <DialogContent className="sm:max-w-2xl">
                                 <DialogHeader>
-                                    <DialogTitle>Get Thumbnails</DialogTitle>
+                                    <DialogTitle>Download Thumbnail</DialogTitle>
                                     <DialogDescription>
-                                        Enter the YouTube video URL to get the thumbnails.
+                                        Choose your format from below.
                                     </DialogDescription>
                                 </DialogHeader>
-                                <div className="space-y-4">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="space-y-6">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         {[
                                             {
                                                 format: "jpg-max",
                                                 icon: "📸",
                                                 title: "JPG - Max Quality",
-                                                resolution: "1280x720 pixels",
-                                                color: "blue",
+                                                resolution: "1280×720",
                                                 url: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`
                                             },
                                             {
                                                 format: "jpg-hq",
                                                 icon: "📸",
                                                 title: "JPG - High Quality",
-                                                resolution: "480x360 pixels",
-                                                color: "green",
+                                                resolution: "480×360",
                                                 url: `https://img.youtube.com/vi/${id}/hqdefault.jpg`
                                             },
                                             {
                                                 format: "jpg-mq",
                                                 icon: "📸",
                                                 title: "JPG - Medium Quality",
-                                                resolution: "320x180 pixels",
-                                                color: "yellow",
+                                                resolution: "320×180",
                                                 url: `https://img.youtube.com/vi/${id}/mqdefault.jpg`
                                             },
                                             {
                                                 format: "webp-max",
                                                 icon: "🖼️",
                                                 title: "WebP - Max Quality",
-                                                resolution: "1280x720 pixels",
-                                                color: "purple",
+                                                resolution: "1280×720",
                                                 url: `https://img.youtube.com/vi_webp/${id}/maxresdefault.webp`
-                                            },
-                                        ].map(({ format, icon, title, resolution, color, url }) => (
+                                            }
+                                        ].map(({ format, icon, title, resolution, url }) => (
                                             <div
-                                                onClick={() => downloadImage(url)}
                                                 key={format}
-                                                className={`format-option p-4 border rounded-lg cursor-pointer hover:border-${color}-400`}
+                                                onClick={() => downloadImage(url)}
                                                 data-format={format}
-                                                style={{ borderColor: color }}
-
+                                                className="group p-3 rounded-lg border shadow-sm cursor-pointer transition-all hover:shadow-md"
                                             >
-                                                <div>
-                                                    <h3 className={`font-semibold text-${color}-800`}>{icon} {title}</h3>
-                                                    <p className={`text-sm text-${color}-600`}>{resolution}</p>
-
+                                                <div className="flex items-start gap-4">
+                                                    <div className="text-2xl">{icon}</div>
+                                                    <div>
+                                                        <h3 className="text-base font-medium">{title}</h3>
+                                                        <p className="text-sm">{resolution}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
-
 
                             </DialogContent>
                         </Dialog>
