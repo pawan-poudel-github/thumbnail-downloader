@@ -7,24 +7,34 @@ import { Tutorial } from "@/sections/Tutorial"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "YouTube Thumbnail Downloader - Download HD YouTube Thumbnails Free",
-  description:
-    "Download high-quality YouTube thumbnails instantly. Free YouTube thumbnail downloader tool. Get HD, Full HD, and 4K thumbnails from any YouTube video URL.",
-  keywords:
-    "YouTube thumbnail downloader, download YouTube thumbnails, YouTube thumbnail extractor, HD thumbnails, free thumbnail downloader",
-  openGraph: {
-    title: "YouTube Thumbnail Downloader - Download HD YouTube Thumbnails Free",
-    description: "Download high-quality YouTube thumbnails instantly. Free YouTube thumbnail downloader tool.",
-    type: "website",
-  },
-}
+  title: "ThumbnailSaver - Free YouTube Thumbnail Downloader",
+  description: "ThumbnailSaver is a fast and free tool to download YouTube thumbnails in HD, Full HD, and 4K. Instantly save high-quality thumbnails from any YouTube video URL. No ads. No signup.",
+  keywords: [
+    "youtube thumbnail downloader",
+    "download youtube thumbnail",
+    "download thumbnail from youtube",
+    "thumbnail youtube download",
+    "thumbnail downloader",
+    "thumbnail downloader youtube",
+    "youtube video thumbnail download",
+    "youtube thumbnail download",
+    "youtube thumbnail download tool",
+    "youtube thumbnail download free",
+    "youtube thumbnail download high quality",
+    "youtube thumbnail download hd",
+    "how to download a youtube thumbnail",
+    "download thumbnail from youtube video",
+    "free youtube thumbnail downloader",
+    "get youtube video thumbnail",
+    "youtube thumbnail image download"
+  ]
+};
+
 
 export default function HomePage() {
   return (
     <>
-
-
-      <main>
+      <main className="px-4">
         {/* Hero Section */}
         <Home />
 

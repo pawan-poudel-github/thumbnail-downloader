@@ -6,7 +6,7 @@ import {
     DialogHeader,
     DialogTitle
 } from "@/components/ui/dialog";
-import { Search } from "lucide-react";
+import { ExternalLink, Search } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -65,7 +65,7 @@ export const App = () => {
 
     return (
         <>
-            <div className="container mx-auto px-4 ">
+            <div className="container mx-auto">
                 <div className="max-w-4xl mx-auto bg-background rounded-md p-2 px-3">
                     <form className="flex flex-col md:flex-row" onSubmit={handleSubmit}>
                         <div className="flex items-center gap-1 w-full">
@@ -75,14 +75,14 @@ export const App = () => {
                                 required
                                 value={url}
                                 onChange={(e) => setUrl(e.target.value)}
-                                placeholder="https://www.youtube.com/watch?v=..."
+                                placeholder="Enter video URL."
                                 className="flex-1 px-6 py-3 border-0 rounded-lg ring-0 outline-0 text-lg focus:outline-0 focus:ring-0 focus:border-0"
                             />
                         </div>
                         <button type="submit" className="bg-primary/90 cursor-pointer text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/100 transition-colors whitespace-nowrap">
                             Get Thumbnails
                         </button>
-                        <Dialog open={isOpen} onOpenChange={setIsOpen}>
+                        <Dialog open={isOpen} onOpenChange={setIsOpen} >
 
                             <DialogContent className="sm:max-w-2xl">
                                 <DialogHeader>
@@ -91,8 +91,8 @@ export const App = () => {
                                         Choose your format from below.
                                     </DialogDescription>
                                 </DialogHeader>
-                                <div className="space-y-6">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="space-y-5 mt-2">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {[
                                             {
                                                 format: "jpg-max",
@@ -127,12 +127,12 @@ export const App = () => {
                                                 key={format}
                                                 onClick={() => downloadImage(url)}
                                                 data-format={format}
-                                                className="group p-3 rounded-lg border shadow-sm cursor-pointer transition-all hover:shadow-md"
+                                                className="group px-4 py-4 rounded-lg border cursor-pointer transition-all hover:shadow-sm"
                                             >
-                                                <div className="flex items-start gap-4">
+                                                <div className="flex items-start gap-6">
                                                     <div className="text-2xl">{icon}</div>
                                                     <div>
-                                                        <h3 className="text-base font-medium">{title}</h3>
+                                                        <h3 className=" font-medium">{title}</h3>
                                                         <p className="text-sm">{resolution}</p>
                                                     </div>
                                                 </div>
@@ -140,7 +140,7 @@ export const App = () => {
                                         ))}
                                     </div>
                                 </div>
-
+                                <a href={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`} className="flex items-center bg-primary text-primary-foreground justify-center gap-2 rounded-sm py-3 text-center" target="_blank"> Preview Image <ExternalLink size={16} /> </a>
                             </DialogContent>
                         </Dialog>
 

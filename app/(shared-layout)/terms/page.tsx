@@ -1,3 +1,19 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Terms of Service - ThumbnailSaver",
+    description: "Review the Terms of Service for ThumbnailSaver, a free YouTube thumbnail downloader. Understand your rights and responsibilities when using our tool to download YouTube video thumbnails.",
+    keywords: [
+        "ThumbnailSaver terms of service",
+        "terms youtube thumbnail downloader",
+        "usage terms ThumbnailSaver",
+        "youtube thumbnail tool legal",
+        "thumbnail downloader usage policy",
+        "free youtube thumbnail tool terms",
+        "ThumbnailSaver user agreement"
+    ]
+};
+
 const Page = () => {
     return (
         <>

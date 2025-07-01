@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
-import { Download } from "lucide-react"
+import { Download } from "lucide-react";
+import { Montserrat } from "next/font/google";
 import Link from "next/link";
+import "./globals.css";
+import Script from "next/script";
 
 
 const montserrat = Montserrat({
@@ -12,27 +12,7 @@ const montserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 })
 
-export const metadata: Metadata = {
-  title: "ThumbnailSaver - YouTube Thumbnail Downloader",
-  description: "Download high-quality YouTube thumbnails instantly. Free YouTube thumbnail downloader tool. Get HD, Full HD, and 4K thumbnails from any YouTube video URL.",
-  keywords: [
-    "youtube thumbnail downloader",
-    "download youtube thumbnail",
-    "download thumbnail from youtube",
-    "thumbnail youtube download",
-    "thumbnail downloader",
-    "thumbnail youtube download",
-    "thumbnail downloader youtube",
-    "youtube video thumbnail download",
-    "youtube thumbnail download",
-    "youtube thumbnail download tool",
-    "youtube thumbnail download free",
-    "youtube thumbnail download high quality",
-    "youtube thumbnail download hd",
-    "how to download a youtube thumbnail",
-    "download thumbnail from youtube video"
-  ]
-};
+
 
 export default function RootLayout({
   children,
@@ -41,6 +21,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script id="google-site-verification-link" async src="https://www.googletagmanager.com/gtag/js?id=G-VE83E7H6LZ" />
+        <Script id="googlse-site-verification-code">
+          {
+            `
+            window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-VE83E7H6LZ');
+            `
+          }
+        </Script>
+      </head>
       <body
         className={`${montserrat.className} ${montserrat.variable} antialiased`}
       >
@@ -55,15 +49,15 @@ export default function RootLayout({
                 <span className="text-xl font-bold text-gray-900">ThumbnailSaver</span>
               </Link>
               <div className="hidden md:flex items-center space-x-8">
-                <a href="#features" className="text-gray-600 hover:text-primary transition-colors">
+                <Link href="/#features" className="text-gray-600 hover:text-primary transition-colors">
                   Features
-                </a>
-                <a href="#how-to" className="text-gray-600 hover:text-primary transition-colors">
+                </Link>
+                <Link href="/#how-to" className="text-gray-600 hover:text-primary transition-colors">
                   How to Use
-                </a>
-                <a href="#faq" className="text-gray-600 hover:text-primary transition-colors">
+                </Link>
+                <Link href="/#faq" className="text-gray-600 hover:text-primary transition-colors">
                   FAQ
-                </a>
+                </Link>
                 <Link href="/#home" className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-rose-700 transition-colors">
                   Get Started
                 </Link>
@@ -100,6 +94,16 @@ export default function RootLayout({
               <div>
                 <h3 className="text-lg font-semibold mb-6">Resources</h3>
                 <ul className="space-y-3 text-gray-400">
+                  <li>
+                    <Link href="/about" className="hover:text-white transition-colors">
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/#features" className="hover:text-white transition-colors">
+                      features
+                    </Link>
+                  </li>
                   <li>
                     <Link href="/#how-to" className="hover:text-white transition-colors">
                       How to Use

@@ -1,3 +1,19 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy - ThumbnailSaver",
+  description: "Your privacy matters. Read our Privacy Policy to understand how ThumbnailSaver protects your personal information while using our free YouTube thumbnail downloader tool.",
+  keywords: [
+    "thumbnail downloader privacy policy",
+    "ThumbnailSaver data protection",
+    "youtube thumbnail tool privacy",
+    "privacy youtube thumbnail downloader",
+    "thumbnail downloader user privacy",
+    "no data collection youtube tool",
+    "safe youtube thumbnail download"
+  ]
+};
+
 const Page = () => {
   return (
     <>

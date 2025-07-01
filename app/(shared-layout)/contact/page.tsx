@@ -5,9 +5,19 @@ import { Textarea } from "@/components/ui/textarea"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: 'Contact',
-    description: "Need help or have feedback? Get in touch with the ThumbnailSaver team—fast support."
-}
+    title: "Contact Us - ThumbnailSaver",
+    description: "Have questions, feedback, or suggestions? Contact the ThumbnailSaver team. We're here to help with anything related to downloading YouTube thumbnails quickly and easily.",
+    keywords: [
+        "contact ThumbnailSaver",
+        "get in touch youtube thumbnail downloader",
+        "ThumbnailSaver support",
+        "youtube thumbnail tool contact",
+        "reach out ThumbnailSaver",
+        "ThumbnailSaver help",
+        "youtube thumbnail downloader support"
+    ]
+};
+
 const Page = () => {
     return (
         <div className="px-5 mx-auto max-w-2xl">
