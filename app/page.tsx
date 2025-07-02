@@ -8,7 +8,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "ThumbnailSaver - Free YouTube Thumbnail Downloader",
-  description: "ThumbnailSaver is a fast and free tool to download YouTube thumbnails in HD, Full HD, and 4K. Instantly save high-quality thumbnails from any YouTube video URL. No ads. No signup.",
+  description: "Free YouTube thumbnail downloader to save HD, Full HD, and 4K thumbnails instantly. No ads, no signup.",
   keywords: [
     "youtube thumbnail downloader",
     "download youtube thumbnail",
