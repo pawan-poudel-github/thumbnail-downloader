@@ -81,7 +81,7 @@ export default function RootLayout({
                 </p>
 
               </div>
-              <div>
+{/*               <div>
                 <h3 className="text-lg font-semibold mb-6">Tools</h3>
                 <ul className="space-y-3 text-gray-400">
                   <li>
@@ -90,7 +90,7 @@ export default function RootLayout({
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
               <div>
                 <h3 className="text-lg font-semibold mb-6">Resources</h3>
                 <ul className="space-y-3 text-gray-400">
